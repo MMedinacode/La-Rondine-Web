@@ -35,20 +35,23 @@
     defecto — no hizo falta reordenar): Yazmín Jofré Carreño, Jairo González, Angela Díaz
     Aranda. Los temas más mencionados según Google: italiana (13), helados (12), ambiente
     (8), productos (7), cannoli (5), ñoquis (4), amaretti (3), canelones (3), ricotta (2).
-  - FOTOS: 3 fotos reales descargadas directo de la galería pública de Google Maps del
-    local (no son de stock): fachada nocturna con el letrero "La Rondine caffè Express" y
-    banderines tricolor italianos (hero-fachada-maps.jpg, foto de jun-2025), interior con
-    decoración vintage italiana — mapa antiguo de Italia, fotografías familiares en blanco
-    y negro, reloj de madera (interior-maps.jpg), y una mesa real con espresso en taza de
-    la marca "Caffè Mauro", canasto de amaretti y un trago (desayuno-maps.jpg, foto de
-    abr-2022) — esta última además confirma nombres reales de productos ("Whiskey Espresso
-    Irish Coffee", "Caramel Macchiato" impresos en los manteles individuales del local).
-  - CARTA: no hay carta con precios publicada en ningún canal (ni Maps, ni Instagram, ni
-    web propia — el negocio no tiene sitio web). Los productos mostrados son 100% reales,
-    confirmados por combinación de: temas de reseñas de Google, destacados/highlights del
-    Instagram oficial (Tiramisu, Crostoli, Cannoli, Pay de limón, Profiterol) y lo visible
-    en la foto real de la mesa (Espresso, Whiskey Espresso, Irish Coffee, Caramel
-    Macchiato, Amaretti). Todos los precios se muestran como "Consultar".
+  - FOTOS Y CARTA ACTUALIZADAS 08-09-2026 (el usuario mandó material real del local
+    después de la primera versión): logo real vectorial-style (logo.jpg — badge circular
+    "Caffetteria La Rondine · Gusto Italiano" con una golondrina hecha de una taza de café
+    humeante y alas verde/rojo, remplaza el wordmark de solo texto), foto real de la
+    fachada nocturna en mejor calidad (fachada-noche.jpg), 3 fotos reales de interior
+    (interior-vintage.jpg: mapa antiguo de Italia + fotos familiares + reloj de madera;
+    interior-barra.jpg: la barra del local; interior-rincon.jpg: rincón con pizarra de
+    especiales y muebles antiguos), 2 fotos reales de productos servidos (plato-pizza.jpg,
+    postre-torta.jpg de chocolate con nueces) y la ya existente desayuno-maps.jpg (espresso
+    + amaretti, descargada antes de Google Maps). Todas comprimidas a JPG optimizado antes
+    de subir (las originales, capturas de pantalla de 400KB–1.3MB, se descartaron del repo
+    tras comprimir).
+  - CARTA REAL COMPLETA CON PRECIOS (08-09-2026): el usuario mandó fotos del menú físico
+    del local — carta transcrita 100% real (Café, Bebidas Frías, Té e Infusiones, Dolce,
+    Salado, Platos Italianos y Pizze), reemplaza la versión anterior que mostraba
+    "Consultar" en todo por inferencia de reseñas/Instagram. Solo "Helados Artesanales"
+    sigue sin precio publicado en el menú físico (se muestra "Consultar").
   - Sin presencia confirmada en Rappi/Uber Eats/PedidosYa. Sin TikTok. Sin programa de
     fidelización encontrado.
   - Identidad visual definida con la skill ui-ux-pro-max (usada como insumo de paleta y
@@ -76,7 +79,7 @@
 
 <header id="site-header">
   <div class="nav-bar">
-    <div class="nav-brand script">La Rondine</div>
+    <div class="nav-brand"><img src="fotos/logo.jpg" alt="Logo de Caffetteria La Rondine" class="brand-logo"><span class="script">La Rondine</span></div>
     <nav class="nav-links" id="main-nav">
       <button class="nav-link active" data-tab="inicio">Inicio</button>
       <button class="nav-link" data-tab="nosotros">Nosotros</button>
@@ -93,7 +96,7 @@
 <main>
   <!-- ===================== INICIO ===================== -->
   <section class="tab-panel active" data-tab-panel="inicio">
-    <div class="hero" style="background-image:linear-gradient(180deg, rgba(15,36,54,.35), rgba(15,36,54,.88) 78%), url('fotos/hero-fachada-maps.jpg');">
+    <div class="hero" style="background-image:linear-gradient(180deg, rgba(15,36,54,.35), rgba(15,36,54,.88) 78%), url('fotos/fachada-noche.jpg');">
       <svg class="swallow-fly s1" viewBox="0 0 64 24" width="52" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 12c8-10 14-10 20-2 3-5 8-8 14-6-4 2-6 5-6 8 6-2 11 1 14 6-8-3-13-1-16 4-3-6-9-9-15-8 2-3 2-6-1-9-4 3-7 5-10 7z" fill="#C9A227" opacity=".55"/></svg>
       <svg class="swallow-fly s2" viewBox="0 0 64 24" width="34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 12c8-10 14-10 20-2 3-5 8-8 14-6-4 2-6 5-6 8 6-2 11 1 14 6-8-3-13-1-16 4-3-6-9-9-15-8 2-3 2-6-1-9-4 3-7 5-10 7z" fill="#EADFC4" opacity=".4"/></svg>
       <div class="hero-inner">
@@ -129,18 +132,29 @@
           </div>
         </div>
         <div class="about-photo">
-          <img src="fotos/interior-maps.jpg" alt="Interior de La Rondine con decoración vintage italiana: mapa antiguo de Italia, fotografías familiares y reloj de madera (foto real del local, Google Maps)">
+          <img src="fotos/interior-vintage.jpg" alt="Interior de La Rondine con decoración vintage italiana: mapa antiguo de Italia, fotografías familiares y reloj de madera (foto real del local)">
         </div>
       </div>
 
       <div class="feature-band reveal">
         <div class="about-photo">
-          <img src="fotos/desayuno-maps.jpg" alt="Mesa real de La Rondine con espresso en taza Caffè Mauro, canasto de amaretti y un trago servido sobre manteles con los nombres Whiskey Espresso, Irish Coffee y Caramel Macchiato (foto real del local, Google Maps)">
+          <img src="fotos/desayuno-maps.jpg" alt="Mesa real de La Rondine con espresso en taza Caffè Mauro, canasto de amaretti y un trago servido sobre manteles con los nombres Whiskey Espresso, Irish Coffee y Caramel Macchiato (foto real del local)">
         </div>
         <div>
           <p class="eyebrow">Lo que dicen de nosotros</p>
           <h2 class="section-title" style="margin-bottom:20px;">"La señora Elena<br>se encargó de que nos sintiéramos como reyes."</h2>
           <p style="line-height:1.8; color:var(--ink-soft); font-size:1.05rem;">Así lo describió Jairo González después de visitar el local. Entre los temas que más se repiten en las 94 opiniones de Google están lo italiano de la propuesta, los helados, el ambiente y clásicos como el cannoli, los ñoquis y los amaretti.</p>
+        </div>
+      </div>
+
+      <div class="reveal" style="margin-top:100px;">
+        <p class="eyebrow">Un vistazo</p>
+        <h2 class="section-title" style="margin-bottom:32px;">El rincón de siempre.</h2>
+        <div class="gallery-grid">
+          <figure><img src="fotos/interior-barra.jpg" alt="La barra de Caffetteria La Rondine (foto real del local)"><div class="gallery-tag">La barra</div></figure>
+          <figure><img src="fotos/interior-rincon.jpg" alt="Rincón del local con pizarra de especiales y muebles antiguos (foto real del local)"><div class="gallery-tag">Un rincón con historia</div></figure>
+          <figure><img src="fotos/plato-pizza.jpg" alt="Pizza artesanal real servida en La Rondine (foto real del local)"><div class="gallery-tag">Pizza al horno</div></figure>
+          <figure><img src="fotos/postre-torta.jpg" alt="Torta de chocolate con nueces real, hecha en La Rondine (foto real del local)"><div class="gallery-tag">Dolce de la casa</div></figure>
         </div>
       </div>
     </div>
@@ -151,7 +165,7 @@
     <div class="section-inner">
       <p class="eyebrow">La carta</p>
       <h2 class="section-title reveal" style="margin-bottom:14px;">Cucina di famiglia.</h2>
-      <p class="menu-note reveal">La Rondine no tiene una carta con precios publicada en ningún canal (no tiene sitio web propio). Los productos de abajo son 100% reales — confirmados por los temas más mencionados en sus 94 reseñas de Google, los destacados de su propio Instagram y lo que se ve servido en una foto real de su mesa — pero los precios se muestran como "Consultar" hasta confirmarlos directamente con el local.</p>
+      <p class="menu-note reveal">Carta real, transcrita del menú físico del local. Solo los helados artesanales no tienen precio publicado — se muestran como "Consultar".</p>
       <div id="menuTabs" class="menu-tabs reveal"></div>
       <div id="menuPanels"></div>
     </div>
@@ -240,7 +254,7 @@
 </main>
 
 <footer>
-  <div class="brand script">La Rondine</div>
+  <div class="brand"><img src="fotos/logo.jpg" alt="Logo de Caffetteria La Rondine" class="brand-logo"><span class="script">La Rondine</span></div>
   <p>Los Cerezos 117, Ñuñoa · <a href="https://instagram.com/caffetteriarondine" target="_blank" rel="noopener">@caffetteriarondine</a></p>
   <p style="opacity:.6; font-size:.82rem;">Sitio demo diseñado con cariño ✨</p>
 </footer>
