@@ -320,10 +320,10 @@ function renderCart() {
     });
   }
   const total = cart.reduce((sum, c) => {
-    const v = firstPrice(c.p);
+    const v = firstPrice(c);
     return v ? sum + v : sum;
   }, 0);
-  const hasUnpriced = cart.some(c => !firstPrice(c.p));
+  const hasUnpriced = cart.some(c => !firstPrice(c));
   document.getElementById('cartTotal').textContent = cart.length
     ? '$' + total.toLocaleString('es-CL') + (hasUnpriced ? ' + a confirmar' : '')
     : '$0';
