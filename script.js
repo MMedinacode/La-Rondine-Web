@@ -57,77 +57,89 @@ const CATEGORIES = [
 const MENU = {
   cafe: {
     items: [
-      { n: 'Espresso', d: 'Carga simple o doble', p: 'Simple $2.270 · Doppio $3.000' },
-      { n: 'Espresso Decaffeinando', d: 'Carga simple o doble', p: 'Simple $2.490 · Doppio $3.290' },
-      { n: 'Americano', d: 'Carga simple o doble', p: 'Simple $2.600 · Doppio $3.270' },
-      { n: 'Capuccino', d: 'Carga simple o doble', p: 'Simple $3.490 · Doppio $3.990' },
-      { n: 'Latte', d: 'Vaso de 12oz', p: 'Simple $4.490 · Doppio $4.990' },
-      { n: 'Macchiato', d: 'Carga simple o doble', p: 'Simple $3.490 · Doppio $3.990' },
-      { n: 'Mocaccino', d: 'Carga simple o doble', p: 'Simple $4.000 · Doppio $4.600' },
-      { n: 'Capuccino Vegano', d: 'Con leche de almendras', p: 'Simple $4.590 · Doppio $4.990' },
-      { n: 'Latte Vegano', d: 'Con leche de almendras', p: 'Simple $4.890 · Doppio $5.290' },
-      { n: 'Affogato', d: 'Helado de vainilla y café espresso', p: 'Simple $4.000 · Doppio $4.600' },
-      { n: 'Café Helado', d: 'Café Mauro con leche, helado de vainilla y crema chantilly', p: '$6.290' },
-      { n: 'Té Latte Chai', d: 'Té chai con leche', p: '$4.490' },
-      { n: 'Chocolate Caliente', d: 'Con marshmallow', p: '$5.590' },
-      { n: 'Té e Infusiones', d: 'Consulte por variedades', p: '$2.600' },
-      { n: 'Limonada', d: 'Con jengibre y menta', p: '$4.290' },
-      { n: 'Jugos Naturales', d: 'Consulte por variedad de sabores', p: '$3.990' },
+      { n: 'Espresso', d: 'Carga simple o doble', v: [['Simple', 2270], ['Doppio', 3000]] },
+      { n: 'Espresso Decaffeinando', d: 'Carga simple o doble', v: [['Simple', 2490], ['Doppio', 3290]] },
+      { n: 'Americano', d: 'Carga simple o doble', v: [['Simple', 2600], ['Doppio', 3270]] },
+      { n: 'Capuccino', d: 'Carga simple o doble', v: [['Simple', 3490], ['Doppio', 3990]] },
+      { n: 'Latte', d: 'Vaso de 12oz', v: [['Simple', 4490], ['Doppio', 4990]] },
+      { n: 'Macchiato', d: 'Carga simple o doble', v: [['Simple', 3490], ['Doppio', 3990]] },
+      { n: 'Mocaccino', d: 'Carga simple o doble', v: [['Simple', 4000], ['Doppio', 4600]] },
+      { n: 'Capuccino Vegano', d: 'Con leche de almendras', v: [['Simple', 4590], ['Doppio', 4990]] },
+      { n: 'Latte Vegano', d: 'Con leche de almendras', v: [['Simple', 4890], ['Doppio', 5290]] },
+      { n: 'Affogato', d: 'Helado de vainilla y café espresso', v: [['Simple', 4000], ['Doppio', 4600]] },
+      { n: 'Café Helado', d: 'Café Mauro con leche, helado de vainilla y crema chantilly', p: 6290 },
+      { n: 'Té Latte Chai', d: 'Té chai con leche', p: 4490 },
+      { n: 'Chocolate Caliente', d: 'Con marshmallow', p: 5590 },
+      { n: 'Té e Infusiones', d: 'Consulte por variedades', p: 2600 },
+      { n: 'Limonada', d: 'Con jengibre y menta', p: 4290 },
+      { n: 'Jugos Naturales', d: 'Consulte por variedad de sabores', p: 3990 },
     ],
     note: 'Cambio a café descafeinado +$1.000 · Leche vegetal +$800. Carta real transcrita del menú físico del local.'
   },
   dolci: {
     items: [
-      { n: 'Tiramisù', d: 'Crema mascarpone con galletas savoiardi remojadas en café, espolvoreado en cacao', p: '$4.900' },
-      { n: 'Cannoli', d: 'Barquillo frito relleno con ricotta. Extremos a elección: chocolate, pistaccio o fruta', p: '$4.500' },
-      { n: 'Crostolli', d: 'Dulce típico del Véneto, de origen veneciano — masa frita delgada espolvoreada con azúcar flor', p: '$4.900' },
-      { n: 'Profiterol', d: 'Pasta choux rellena con crema diplomática, bañado en chocolate amargo', p: '$3.800' },
-      { n: 'Pie de Limón', d: 'Pasta frola con merengue a la italiana', p: '$4.200' },
-      { n: 'Chesscake', d: 'Pasta frola con mermelada de frambuesa de la casa', p: '$4.400' },
-      { n: 'Cassatine', d: 'Pasta frola rellena con ricotta — dulce típico de la tradición siciliana', p: '$3.000' },
-      { n: 'Torta Ricotta Pera', d: 'Dos discos de bizcocho con avellana y centro de ricotta con pera — tradición de la costa amalfitana', p: '$4.900' },
-      { n: 'Amaretti', d: 'Galleta de almendra y clara de huevo, sin harina', p: '$600' },
-      { n: 'Maffi Chocolate', d: '', p: '$2.700' },
-      { n: 'Galletas de Limón', d: '', p: '$400' },
+      { n: 'Tiramisù', d: 'Crema mascarpone con galletas savoiardi remojadas en café, espolvoreado en cacao', p: 4900 },
+      { n: 'Cannoli', d: 'Barquillo frito relleno con ricotta. Extremos a elección: chocolate, pistaccio o fruta', p: 4500 },
+      { n: 'Crostolli', d: 'Dulce típico del Véneto — masa frita delgada espolvoreada con azúcar flor', p: 4900 },
+      { n: 'Profiterol', d: 'Pasta choux rellena con crema diplomática, bañado en chocolate amargo', p: 3800 },
+      { n: 'Pie de Limón', d: 'Pasta frola con merengue a la italiana', p: 4200 },
+      { n: 'Chesscake', d: 'Pasta frola con mermelada de frambuesa de la casa', p: 4400 },
+      { n: 'Cassatine', d: 'Pasta frola rellena con ricotta — dulce típico siciliano', p: 3000 },
+      { n: 'Torta Ricotta Pera', d: 'Bizcocho de avellana con centro de ricotta y pera — de la costa amalfitana', p: 4900 },
+      { n: 'Amaretti', d: 'Galleta de almendra y clara de huevo, sin harina', p: 600 },
+      { n: 'Maffi Chocolate', d: '', p: 2700 },
+      { n: 'Galletas de Limón', d: '', p: 400 },
     ],
     note: 'Consulte por la disponibilidad de los dulces italianos para pedidos en ocasiones especiales.'
   },
   salado: {
     items: [
-      { n: 'Toast Jamón Artesanal', d: 'Pan de molde integral con jamón pierna artesanal y mozzarella', p: '$4.600' },
-      { n: 'Toast Jamón Serrano', d: 'Pan de molde integral con jamón serrano y mozzarella', p: '$5.500' },
-      { n: 'Ciabatta', d: 'Pan ciabatta con jamón pierna, mozzarella, lechuga y tomate', p: '$6.900' },
-      { n: 'Club Sándwich', d: 'Pan de molde integral con fritada de huevo, tocino, jamón pierna, mozzarella, tomate y lechuga', p: '$9.900' },
-      { n: 'Parmeggiana', d: 'Lasaña de berenjena sin masa, salsa de tomate de la casa y mozzarella', p: 'Servirse $8.500 · Llevar $7.000' },
-      { n: 'Cannelloni Ricotta & Espinaca', d: '', p: 'Servirse $8.500 · Llevar $7.000' },
-      { n: 'Canelloni Carne', d: '', p: 'Servirse $8.500 · Llevar $7.000' },
+      { n: 'Toast Jamón Artesanal', d: 'Pan de molde integral con jamón pierna artesanal y mozzarella', p: 4600 },
+      { n: 'Toast Jamón Serrano', d: 'Pan de molde integral con jamón serrano y mozzarella', p: 5500 },
+      { n: 'Ciabatta', d: 'Pan ciabatta con jamón pierna, mozzarella, lechuga y tomate', p: 6900 },
+      { n: 'Club Sándwich', d: 'Pan de molde integral con huevo, tocino, jamón pierna, mozzarella, tomate y lechuga', p: 9900 },
+      { n: 'Parmeggiana', d: 'Lasaña de berenjena sin masa, salsa de tomate de la casa y mozzarella', v: [['Para servirse', 8500], ['Para llevar', 7000]] },
+      { n: 'Cannelloni Ricotta & Espinaca', d: '', v: [['Para servirse', 8500], ['Para llevar', 7000]] },
+      { n: 'Canelloni Carne', d: '', v: [['Para servirse', 8500], ['Para llevar', 7000]] },
     ],
     note: 'Carta real transcrita del menú físico del local (08-09-2026).'
   },
   pizze: {
     items: [
-      { n: 'Margarita', d: 'Salsa de tomate de la casa, mozzarella, hojas de albahaca. No puede incluir agregados', p: '$9.900' },
-      { n: 'Parmeggiana', d: 'Salsa de tomate de la casa, mozzarella, berenjena grillada y hojuelas de parmesano', p: '$12.700' },
-      { n: 'Prosciutto', d: 'Salsa de tomate de la casa, mozzarella y jamón pierna artesanal', p: '$11.900' },
-      { n: 'Funghi', d: 'Salsa de tomate de la casa, mozzarella y hongos', p: '$11.900' },
-      { n: 'Prosciutto & Funghi', d: 'Salsa de tomate de la casa, mozzarella, hongos y jamón pierna artesanal', p: '$12.900' },
-      { n: 'Romana', d: 'Salsa de tomate de la casa, mozzarella, anchoas, alcaparras y aceitunas', p: '$13.700' },
-      { n: 'Vegetariana', d: 'Salsa de tomate de la casa, mozzarella, berenjena, zapallo italiano y pimentón grillado', p: '$13.700' },
-      { n: 'Tonno & Cipolla', d: 'Salsa de tomate de la casa, mozzarella, atún y cebolla', p: '$12.700' },
-      { n: 'Salame', d: 'Salsa de tomate de la casa, mozzarella y salame', p: '$12.700' },
-      { n: 'Pepperoni', d: 'Salsa de tomate de la casa, mozzarella y pepperoni', p: '$12.800' },
-      { n: 'Capricciosa', d: 'Salsa de tomate de la casa, mozzarella, jamón pierna artesanal y corazón de alcachofa', p: '$15.200' },
-      { n: 'Prosciutto Crudo & Tomate Cherry & Rúcula', d: 'Salsa de tomate de la casa, mozzarella, tomate cherry, jamón serrano y rúcula', p: '$15.200' },
+      { n: 'Margarita', d: 'Salsa de tomate de la casa, mozzarella y albahaca. No admite agregados', p: 9900 },
+      { n: 'Parmeggiana', d: 'Mozzarella, berenjena grillada y hojuelas de parmesano', p: 12700 },
+      { n: 'Prosciutto', d: 'Mozzarella y jamón pierna artesanal', p: 11900 },
+      { n: 'Funghi', d: 'Mozzarella y hongos', p: 11900 },
+      { n: 'Prosciutto & Funghi', d: 'Mozzarella, hongos y jamón pierna artesanal', p: 12900 },
+      { n: 'Romana', d: 'Mozzarella, anchoas, alcaparras y aceitunas', p: 13700 },
+      { n: 'Vegetariana', d: 'Mozzarella, berenjena, zapallo italiano y pimentón grillado', p: 13700 },
+      { n: 'Tonno & Cipolla', d: 'Mozzarella, atún y cebolla', p: 12700 },
+      { n: 'Salame', d: 'Mozzarella y salame', p: 12700 },
+      { n: 'Pepperoni', d: 'Mozzarella y pepperoni', p: 12800 },
+      { n: 'Capricciosa', d: 'Mozzarella, jamón pierna artesanal y corazón de alcachofa', p: 15200 },
+      { n: 'Prosciutto Crudo, Cherry & Rúcula', d: 'Mozzarella, tomate cherry, jamón serrano y rúcula', p: 15200 },
     ],
-    note: 'Agregados $2.000 · Queso vegano $2.500 · Alcachofas, jamón serrano o anchoas $2.500. Carta real transcrita del menú físico del local.'
+    note: 'Todas llevan salsa de tomate de la casa. Agregados $2.000 · Queso vegano $2.500 · Alcachofas, jamón serrano o anchoas $2.500.'
   },
   gelato: {
     items: [
-      { n: 'Helados Artesanales', d: 'De fruta o de leche — consulte por variedad de sabores disponibles ese día.' },
+      { n: 'Helados Artesanales', d: 'De fruta o de leche — consulte por los sabores del día.' },
     ],
-    note: '"Helados" es el segundo tema más mencionado en las 94 reseñas de Google del local (12 menciones) — sin precio publicado en el menú físico.'
+    note: '«Helados» es el segundo tema más mencionado en sus 94 reseñas de Google (12 menciones), y no tiene precio en el menú físico.'
   }
 };
+
+/* Formatea 2270 -> "$2.270" */
+function fmt(n) { return '$' + n.toLocaleString('es-CL'); }
+
+/* Lo que se muestra en la fila de la carta. Con variantes va "desde",
+   porque poner los dos precios obliga a dos lineas y descuadra la grilla:
+   las dos opciones se eligen al abrir el producto. */
+function precioFila(item) {
+  if (item.v && item.v.length) return 'desde ' + fmt(item.v[0][1]);
+  if (typeof item.p === 'number') return fmt(item.p);
+  return 'Consultar';
+}
 
 const tabsEl = document.getElementById('menuTabs');
 const panelsEl = document.getElementById('menuPanels');
@@ -144,31 +156,50 @@ CATEGORIES.forEach((cat, i) => {
   const panel = document.createElement('div');
   panel.className = 'menu-panel' + (i === 0 ? ' active' : '');
   panel.id = 'panel-' + cat.id;
-  const grid = document.createElement('div');
-  grid.className = 'menu-grid';
+
   const catBlock = document.createElement('div');
   catBlock.className = 'menu-cat';
   const h = document.createElement('h3');
   h.textContent = cat.label;
   catBlock.appendChild(h);
+
+  /* Las filas van dentro de su propia rejilla: dos columnas en pantalla
+     grande, una sola en telefono. Antes colgaban sueltas del bloque y
+     quedaba una columna larguisima. */
+  const lista = document.createElement('div');
+  lista.className = 'menu-items';
+
   data.items.forEach(item => {
     const row = document.createElement('div');
     row.className = 'menu-item';
-    const nameEl = document.createElement('span');
-    nameEl.className = 'name';
-    nameEl.textContent = item.n;
-    const descEl = document.createElement('span');
-    descEl.className = 'desc';
-    descEl.textContent = item.d || '';
-    nameEl.appendChild(descEl);
+
+    /* carta-fotos.js inserta su miniatura como primer hijo, asi que la
+       fila es una rejilla de tres columnas: foto | texto | precio. Con
+       medidas fijas, el precio de TODAS las filas cae en la misma
+       vertical, se llame el producto "Latte" o "Espresso Decaffeinando". */
+    const txt = document.createElement('span');
+    txt.className = 'name';
+    txt.textContent = item.n;
+    if (item.d) {
+      const descEl = document.createElement('span');
+      descEl.className = 'desc';
+      descEl.textContent = item.d;
+      txt.appendChild(descEl);
+    }
+
     const priceEl = document.createElement('span');
     priceEl.className = 'price';
-    priceEl.textContent = item.p || 'Consultar';
-    row.appendChild(nameEl);
+    priceEl.textContent = precioFila(item);
+    if (item.v) priceEl.classList.add('price-desde');
+
+    row.appendChild(txt);
     row.appendChild(priceEl);
     row.addEventListener('click', () => openModal(cat.label, item));
-    catBlock.appendChild(row);
+    lista.appendChild(row);
   });
+
+  catBlock.appendChild(lista);
+
   if (data.note) {
     const note = document.createElement('p');
     note.className = 'ph-note';
@@ -176,8 +207,7 @@ CATEGORIES.forEach((cat, i) => {
     note.textContent = data.note;
     catBlock.appendChild(note);
   }
-  grid.appendChild(catBlock);
-  panel.appendChild(grid);
+  panel.appendChild(catBlock);
   panelsEl.appendChild(panel);
 });
 
@@ -191,20 +221,56 @@ function showMenuTab(key) {
 -------------------------------------------------------------- */
 const modalOverlay = document.getElementById('modalOverlay');
 const modalBox = document.getElementById('modalBox');
+let currentVar = null;
 let currentItem = null;
 function openModal(cat, item) {
   currentItem = { ...item, cat };
+  currentVar = null;
   document.getElementById('modalCategory').textContent = cat;
   document.getElementById('modalName').textContent = item.n;
-  document.getElementById('modalDesc').textContent = item.d;
-  document.getElementById('modalPrice').textContent = item.p || 'Consultar';
+  document.getElementById('modalDesc').textContent = item.d || '';
+
+  /* ⚠️ ACA ESTABA EL BUG. Productos como el espresso traian los dos
+     precios metidos en un solo texto ("Simple $2.270 · Doppio $3.000"),
+     asi que no habia nada que elegir y el carrito siempre cobraba el
+     primero. Ahora cada variante es un boton de verdad. */
+  const cont = document.getElementById('modalVariantes');
+  cont.innerHTML = '';
+  if (item.v && item.v.length) {
+    cont.hidden = false;
+    item.v.forEach((v, idx) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'var-btn' + (idx === 0 ? ' on' : '');
+      b.innerHTML = '<span>' + v[0] + '</span><b>' + fmt(v[1]) + '</b>';
+      b.addEventListener('click', () => {
+        cont.querySelectorAll('.var-btn').forEach(x => x.classList.remove('on'));
+        b.classList.add('on');
+        currentVar = v;
+        document.getElementById('modalPrice').textContent = fmt(v[1]);
+      });
+      cont.appendChild(b);
+    });
+    currentVar = item.v[0];
+    document.getElementById('modalPrice').textContent = fmt(item.v[0][1]);
+  } else {
+    cont.hidden = true;
+    document.getElementById('modalPrice').textContent =
+      typeof item.p === 'number' ? fmt(item.p) : 'Consultar';
+  }
   toggleModal(true);
 }
+
 function toggleModal(open) { modalOverlay.classList.toggle('open', open); modalBox.classList.toggle('open', open); }
 document.getElementById('modalCloseBtn').addEventListener('click', () => toggleModal(false));
 modalOverlay.addEventListener('click', () => toggleModal(false));
 document.getElementById('modalAddBtn').addEventListener('click', () => {
-  if (currentItem) { addToCart(currentItem); toggleModal(false); toggleCart(true); }
+  if (currentItem) {
+    const elegido = currentVar
+      ? { ...currentItem, n: currentItem.n + ' (' + currentVar[0] + ')', precio: currentVar[1] }
+      : { ...currentItem, precio: typeof currentItem.p === 'number' ? currentItem.p : null };
+    addToCart(elegido); toggleModal(false); toggleCart(true);
+  }
 });
 
 /* --------------------------------------------------------------
@@ -216,10 +282,11 @@ let cart = [];
 function addToCart(item) { cart.push({ ...item }); renderCart(); }
 function removeFromCart(idx) { cart.splice(idx, 1); renderCart(); }
 
-function firstPrice(p) {
-  if (!p) return null;
-  const m = p.replace(/\./g, '').match(/\$(\d+)/);
-  return m ? parseInt(m[1], 10) : null;
+/* Antes esto leia el primer $ que encontrara dentro del texto del precio,
+   asi que en un producto con dos valores SIEMPRE cobraba el mas barato.
+   Ahora cada linea del carrito llega con su precio ya resuelto. */
+function firstPrice(item) {
+  return (item && typeof item.precio === 'number') ? item.precio : null;
 }
 
 function renderCart() {
@@ -240,7 +307,7 @@ function renderCart() {
       name.textContent = c.n;
       const price = document.createElement('div');
       price.className = 'price';
-      price.textContent = c.p || 'Consultar precio';
+      price.textContent = typeof c.precio === 'number' ? fmt(c.precio) : 'Consultar precio';
       info.appendChild(name);
       info.appendChild(price);
       const removeBtn = document.createElement('button');
